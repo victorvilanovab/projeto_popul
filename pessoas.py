@@ -36,3 +36,13 @@ class pessoas:
         # 15 atributo: Anos de estudo
 
         # 16 atributo: Regiões
+        if (rm.random() <= (np.random.normal(2770, 1, 9) / 16871)):
+            lista[i, 0] = 'Norte'
+        elif (rm.random() <= (np.random.normal(5034, 1, 5) / 16871)):
+            lista[i, 0] = 'Nordeste'
+        elif (rm.random() <= (np.random.normal(8901, 1, 4) / 16871)):
+            lista[i, 0] = 'Sudeste'
+        elif (rm.random() <= (np.random.normal(12787, 1, 4) / 16871)):
+            lista[i, 0] = 'Sul'
+        else:
+            lista[i, 0] = 'Centro-Oeste'
