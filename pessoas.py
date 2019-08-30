@@ -30,6 +30,7 @@ class pessoas:
         # 12 atributo: Sexo
 
         # 13 atributo: Cor
+        lista[i, 2] = 'Branca' if (rm.random() <= (np.random.normal(48743, 0,5) /80035)) else 'Preta ou Parda'
 
         # 14 atributo: Grupo de idade
 
