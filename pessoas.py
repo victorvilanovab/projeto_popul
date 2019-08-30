@@ -30,20 +30,20 @@ class pessoas:
         # 12 atributo: Sexo
 
         # 13 atributo: Cor
-        lista[i, 2] = 'Branca' if (rm.random() <= (np.random.normal(48743, 0,5) /80035)) else 'Preta ou Parda'
+        lista[i, 2] = 'Branca' if (rm.random() <= (np.random.normal(48743,0.5) /80035)) else 'Preta ou Parda'
 
         # 14 atributo: Grupo de idade
 
         # 15 atributo: Anos de estudo
 
         # 16 atributo: Regiões
-        if (rm.random() <= (np.random.normal(2770, 1, 9) / 16871)):
+        if (rm.random() <= (np.random.normal(2770, 1.9) / 16871)):
             lista[i, 0] = 'Norte'
-        elif (rm.random() <= (np.random.normal(5034, 1, 5) / 16871)):
+        elif (rm.random() <= (np.random.normal(5034, 1.5) / 16871)):
             lista[i, 0] = 'Nordeste'
-        elif (rm.random() <= (np.random.normal(8901, 1, 4) / 16871)):
+        elif (rm.random() <= (np.random.normal(8901, 1.4) / 16871)):
             lista[i, 0] = 'Sudeste'
-        elif (rm.random() <= (np.random.normal(12787, 1, 4) / 16871)):
+        elif (rm.random() <= (np.random.normal(12787, 1.4) / 16871)):
             lista[i, 0] = 'Sul'
         else:
             lista[i, 0] = 'Centro-Oeste'
