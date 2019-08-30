@@ -28,6 +28,7 @@ class pessoas:
         # 11 atributo: Não havia dificuldades para frequentar o curso de qualificação 5.1.3.1
 
         # 12 atributo: Sexo
+        lista[i, 1] = 'Homem' if (rm.random() <= (np.random.normal(75403, 0.2) / 157967)) else 'Mulher'
 
         # 13 atributo: Cor
         lista[i, 2] = 'Branca' if (rm.random() <= (np.random.normal(48743,0.5) /80035)) else 'Preta ou Parda'
