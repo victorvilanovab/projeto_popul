@@ -36,6 +36,9 @@ class pessoas:
         #8 atributo
         hist8 = np.random.multinomial(int(n), [np.random.uniform(0.927, 0.963), np.random.uniform(0.023, 0.087)])
 
+        #9 atributo
+        hist9 = np.random.multinomial(int(n), [np.random.uniform(0.199, 0.255), np.random.uniform(0.765, 0.781)])
+
 
         for i in range (int (n)):
             # 1 atributo: rendimento mensal domiciliar per capita 5.1.1.1
@@ -104,8 +107,18 @@ class pessoas:
                 lista[i, 8] = 'A distancia'
                 hist8[escolha8] -= 1
 
+        # 9 atributo: Frquentaram ou nao o curso de qualificacao profissional
+            classes_c_valor9 = np.array(np.nonzero(hist9))
+            c9 = classes_c_valor9.tolist()
+            d9 = c9[0]
+            escolha9 = d9[random.randint(0, np.size(classes_c_valor9) - 1)]
+            if escolha9 == 0:
+                lista[i, 9] = "Frequentaram"
+                hist9[escolha9] -= 1
+            else:
+                lista[i, 9] = "Não frequentaram"
+                hist9[escolha9] -= 1
 
-        # 9 atributo: Falta de tempo para estudar 5.1.3.1
 
         # 10 atributo: Outras dificuldades para freguentar o curso de qualificação 5.1.3.1
 
