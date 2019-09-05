@@ -72,8 +72,6 @@ class pessoas:
 
         # 3 atributo: Tempo de duração de qualificação profissional 5.1.2.1
 
-        # 4 atributo: Modalidade 5.1.2.1
-
         # 5 atributo: Turno 5.1.2.1
 
         # 6 atributo: Dificuldade financeira 5.1.3.1
@@ -183,5 +181,6 @@ class pessoas:
         print(hist5)
         print(hist6)
         print(hist7)
+        print(hist8)
 
 pessoas.individuos(10)
