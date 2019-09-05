@@ -30,6 +30,8 @@ class pessoas:
         #6 atributo
         hist6 = np.random.multinomial(int(n), [np.random.uniform(0.42, 0.48), np.random.uniform(0.514, 0.558)])
 
+        #7 atributo
+        hist6 = np.random.multinomial(int(n), [np.random.uniform(0.154, 0.228), np.random.uniform(0.789, 0.829)])
 
 
         for i in range (int (n)):
@@ -107,6 +109,17 @@ class pessoas:
                 lista[i, 5] = 'Mulher'
                 hist5[escolha5] -= 1
 
+        # 7 atributo: Rede de ensino
+            classes_c_valor7 = np.array(np.nonzero(hist7))
+            c5 = classes_c_valor7.tolist()
+            d5 = c7[0]
+            escolha7 = d7[random.randint(0, np.size(classes_c_valor7) - 1)]
+            if escolha7 == 0:
+                lista[i, 7] = 'Pública'
+                hist7[escolha7] -= 1
+            else:
+                lista[i, 7] = 'Particular'
+                hist5[escolha7] -= 1
 
 
 
