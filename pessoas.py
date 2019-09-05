@@ -111,10 +111,10 @@ class pessoas:
             d9 = c9[0]
             escolha9 = d9[random.randint(0, np.size(classes_c_valor9) - 1)]
             if escolha9 == 0:
-                lista[i, 9] = "Frequentaram"
+                lista[i, 9] = "Frequentou"
                 hist9[escolha9] -= 1
             else:
-                lista[i, 9] = "Não frequentaram"
+                lista[i, 9] = "Não frequentou"
                 hist9[escolha9] -= 1
 
 
@@ -195,5 +195,6 @@ class pessoas:
         print(hist6)
         print(hist7)
         print(hist8)
+        print(hist9)
 
 pessoas.individuos(10)
