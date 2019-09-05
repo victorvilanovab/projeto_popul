@@ -33,6 +33,9 @@ class pessoas:
         #7 atributo
         hist7 = np.random.multinomial(int(n), [np.random.uniform(0.154, 0.228), np.random.uniform(0.789, 0.829)])
 
+        #8 atributo
+        hist8 = np.random.multinomial(int(n), [np.random.uniform(0.927, 0.963), np.random.uniform(0.023, 0.087)])
+
 
         for i in range (int (n)):
             # 1 atributo: rendimento mensal domiciliar per capita 5.1.1.1
@@ -89,7 +92,18 @@ class pessoas:
 
 
 
-        # 8 atributo: Dificuldade de cumprir o horário do curso 5.1.3.1
+        # 8 atributo: Modalidade
+            classes_c_valor8 = np.array(np.nonzero(hist8))
+            c8 = classes_c_valor8.tolist()
+            d8 = c8[0]
+            escolha8 = d8[random.randint(0, np.size(classes_c_valor8) - 1)]
+            if escolha8 == 0:
+                lista[i, 8] = 'Presencial'
+                hist8[escolha8] -= 1
+            else:
+                lista[i, 8] = 'A distancia'
+                hist8[escolha8] -= 1
+
 
         # 9 atributo: Falta de tempo para estudar 5.1.3.1
 
