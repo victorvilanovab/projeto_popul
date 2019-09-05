@@ -26,6 +26,19 @@ class pessoas:
                                                  np.random.uniform(0.219, 0.265)])
         #5 atributo
         hist5 = np.random.multinomial(int(n), [np.random.uniform(0.43, 0.48), np.random.uniform(0.524, 0.566)])
+        classes_c_valor6 = np.array(np.nonzero(hist6))
+        c6 = classes_c_valor6.tolist()
+        d6 = c6[0]
+        escolha6 = d6[random.randint(0, np.size(classes_c_valor6) - 1)]
+        if escolha6 == 0:
+            lista[i, 6] = 'Branco'
+            hist6[escolha5] -= 1
+        else:
+            lista[i, 6] = 'Preto ou pardo'
+            hist6[escolha5] -= 1
+
+        #6 atributo
+        hist6 = np.random.multinomial(int(n), [np.random.uniform(0.42, 0.48), np.random.uniform(0.514, 0.558)])
 
 
         for i in range (int (n)):
