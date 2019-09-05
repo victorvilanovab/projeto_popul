@@ -8,22 +8,25 @@ class pessoas:
         self.individuo = self.pessoas (self.tamanho)
 
     def individuos(n):
-        lista_comprimento = np.arange (10 * n)
-        lista = lista_comprimento.reshape ((n, 10))
-        lista = np.array (lista, dtype='object')
+        lista_comprimento = np.arange(10 * n)
+        lista = lista_comprimento.reshape((n, 10))
+        lista = np.array(lista, dtype='object')
 
         #0 atributo
-        hist0 = np.random.multinomial (int (n), [np.random.uniform (0.045, 0.081), np.random.uniform (0.135, 0.154),
-                                                np.random.uniform (0.282, 0.296), np.random.uniform (0.271, 0.285),
-                                                np.random.uniform (0.076, 0.102), np.random.uniform (0.036, 0.072),
-                                                np.random.uniform (0.013, 0.067), np.random.uniform (0.015, 0.067)])
+        hist0 = np.random.multinomial(int(n), [np.random.uniform(0.045, 0.081), np.random.uniform(0.135, 0.154),
+                                                np.random.uniform(0.282, 0.296), np.random.uniform(0.271, 0.285),
+                                                np.random.uniform(0.076, 0.102), np.random.uniform(0.036, 0.072),
+                                                np.random.uniform(0.013, 0.067), np.random.uniform(0.015, 0.067)])
         #1 atributo
         hist1 = np.random.multinomial(int(n), [np.random.uniform(0.11,0.188), np.random.uniform(0.831,0.871)])
 
-        # 4 atributo
-        hist4 = np.random.multinomial (int (n), [np.random.uniform (0.142, 0.180), np.random.uniform (0.122, 0.152),
-                                                 np.random.uniform (0.215, 0.243), np.random.uniform (0.216, 0.244),
-                                                 np.random.uniform (0.219, 0.265)])
+        #4 atributo
+        hist4 = np.random.multinomial(int(n), [np.random.uniform(0.142, 0.180), np.random.uniform(0.122, 0.152),
+                                                 np.random.uniform(0.215, 0.243), np.random.uniform(0.216, 0.244),
+                                                 np.random.uniform(0.219, 0.265)])
+        #5 atributo
+        hist5 = np.random.multinomial(int(n), [np.random.uniform(0.43, 0.48), np.random.uniform(0.524, 0.566)])
+
 
         for i in range (int (n)):
             # 1 atributo: rendimento mensal domiciliar per capita 5.1.1.1
@@ -32,28 +35,28 @@ class pessoas:
             d0 = c0[0]
             escolha0 = d0[random.randint (0, np.size (classes_c_valor0) - 1)]
             if escolha0 == 0:
-                lista[i, 0] = "|0 _ 1/4 S.M.|"
+                lista[i, 0] = "0 - 1/4 S.M."
                 hist0[escolha0] -= 1
             elif escolha0 == 1:
-                lista[i, 0] = "|1/4 _ 1/2 S.M.|"
+                lista[i, 0] = "1/4 - 1/2 S.M."
                 hist0[escolha0] -= 1
             elif escolha0 == 2:
-                lista[i, 0] = "|1/2 _ 1 S.M|"
+                lista[i, 0] = "1/2 - 1 S.M"
                 hist0[escolha0] -= 1
             elif escolha0 == 3:
-                lista[i, 0] = "|1 _ 2 S.M|"
+                lista[i, 0] = "1 - 2 S.M"
                 hist0[escolha0] -= 1
             elif escolha0 == 4:
-                lista[i, 0] = "|2 _ 3 S.M|"
+                lista[i, 0] = "2 - 3 S.M"
                 hist0[escolha0] -= 1
             elif escolha0 == 5:
-                lista[i, 0] = "|3 _ 5 S.M|"
+                lista[i, 0] = "3 - 5 S.M"
                 hist0[escolha0] -= 1
             elif escolha0 == 6:
-                lista[i, 0] = "|5 _ + S.M|"
+                lista[i, 0] = "5+ S.M"
                 hist0[escolha0] -= 1
             elif escolha0 == 7:
-                lista[i, 0] = "|Sem declaração|"
+                lista[i, 0] = "Sem declaração"
                 hist0[escolha0] -= 1
 
         # 2 atributo: Vinculação ao PRONATEC 5.1.2.1
@@ -72,10 +75,10 @@ class pessoas:
             d1 = c1[0]
             escolha1 = d1[random.randint (0, np.size (classes_c_valor1) - 1)]
             if escolha1 == 0:
-                lista[i,1] = "|Havia dificuldade $$|"
+                lista[i,1] = "Havia dificuldade $$"
                 hist1[escolha1] -= 1
             else:
-                lista[i,1] = "|Não havia dificuldade $$|"
+                lista[i,1] = "Não havia dificuldade $$"
                 hist1[escolha1] -= 1
 
 
@@ -89,8 +92,20 @@ class pessoas:
         # 11 atributo: Não havia dificuldades para frequentar o curso de qualificação 5.1.3.1
 
         # 12 atributo: Sexo
-        #     lista[i, 1] = 'Homem' if (rm.random() <= (np.random.normal(75403, 0.2) / 157967)) else 'Mulher'
-        #
+            classes_c_valor5 = np.array(np.nonzero(hist5))
+            c5 = classes_c_valor5.tolist()
+            d5 = c5[0]
+            escolha5 = d5[random.randint(0, np.size(classes_c_valor5) - 1)]
+            if escolha5 == 0:
+                lista[i, 5] = 'Homem'
+                hist5[escolha5] -= 1
+            else:
+                lista[i, 5] = 'Mulher'
+                hist5[escolha5] -= 1
+
+
+
+
         # # 13 atributo: Cor
         #     lista[i, 2] = 'Branca' if (rm.random() <= (np.random.normal(48743,0.5) /80035)) else 'Preta ou Parda'
 
@@ -106,24 +121,25 @@ class pessoas:
 
 
             if escolha4 == 0:
-                lista[i, 4] = '|Norte|'
+                lista[i, 4] = 'Norte'
                 hist4[escolha4] -= 1
             elif escolha4 == 1:
-                lista[i, 4] = '|Nordeste|'
+                lista[i, 4] = 'Nordeste'
                 hist4[escolha4] -= 1
             elif escolha4 == 2:
-                lista[i, 4] = '|Sudeste|'
+                lista[i, 4] = 'Sudeste'
                 hist4[escolha4] -= 1
             elif escolha4 == 3:
-                lista[i, 4] = '|Sul|'
+                lista[i, 4] = 'Sul'
                 hist4[escolha4] -= 1
             else:
-                lista[i, 4] = '|Centro-Oeste|'
+                lista[i, 4] = 'Centro-Oeste'
                 hist4[escolha4] -= 1
         #
         print(lista)
         print(hist0)
         print(hist1)
         print(hist4)
+        print(hist5)
 
 pessoas.individuos(10)
