@@ -1,8 +1,76 @@
 import random
 import numpy as np
 
+class Pessoas:
+    def __init__(self):
+        #0 atributo
+        escolha0 = np.nonzero(np.random.multinomial(1, [np.random.uniform(0.045, 0.081), np.random.uniform(0.135, 0.154),
+                                                np.random.uniform(0.282, 0.296), np.random.uniform(0.271, 0.285),
+                                                np.random.uniform(0.076, 0.102), np.random.uniform(0.036, 0.072),
+                                                np.random.uniform(0.013, 0.067), np.random.uniform(0.015, 0.067)]))
 
-class pessoas:
+        if escolha0 == 0:
+            self.renda_per_capta_em_SM = "0-1/4"
+        elif escolha0 == 1:
+            self.renda_per_capta_em_SM = "1/4-1/2"
+        elif escolha0 == 2:
+            self.renda_per_capta_em_SM = "1/2-1"
+        elif escolha0 == 3:
+            self.renda_per_capta_em_SM = "1-2"
+        elif escolha0 == 4:
+            self.renda_per_capta_em_SM = "2-3"
+        elif escolha0 == 5:
+            self.renda_per_capta_em_SM = "3-5"
+        elif escolha0 == 6:
+            self.renda_per_capta_em_SM = "5+"
+        elif escolha0 == 7:
+            self.renda_per_capta_em_SM = "Sem_declaracao"
+
+        # 1 atributo
+         escolha1 = np.nonzero(np.random.multinomial(int(n), [np.random.uniform(0.11, 0.188), np.random.uniform(0.831, 0.871)]))
+        if escolha1 == 0:
+            self.dificuldade_acesso = "Havia"
+        else:
+            self.dificuldade_acesso = "Nao_havia"
+
+        # 2 atributo
+        escolha2 = np.nonzero(np.random.multinomial(int(n), [np.random.uniform(0.142, 0.180), np.random.uniform(0.122, 0.152),
+                                               np.random.uniform(0.215, 0.243), np.random.uniform(0.216, 0.244),
+                                               np.random.uniform(0.219, 0.265)]))
+        if escolha2 == 0:
+            self.regiao = 'Norte'
+        elif escolha2 == 1:
+            self.regiao = 'Nordeste'
+        elif escolha2 == 2:
+            self.regiao = 'Sudeste'
+        elif escolha2 == 3:
+            self.regiao = 'Sul'
+        else:
+            self.regiao = 'Centro-Oeste'
+
+        # 3 atributo
+        escolha3 = np.nonzero(np.random.multinomial(int(n), [np.random.uniform(0.43, 0.48), np.random.uniform(0.524, 0.566)]))
+        if escolha3 == 0:
+            self.sexo = 'Homem'
+        else:
+            self.sexo = 'Mulher'
+
+        # 4 atributo
+        escolha4 = np.nonzero(np.random.multinomial(int(n), [np.random.uniform(0.42, 0.48), np.random.uniform(0.514, 0.558)]))
+        if escolha4 == 0:
+            self.cor = 'Branca'
+        else:
+            self.cor = 'Preta/parda'
+
+
+
+
+
+
+
+
+
+class Populacao:
     def __init__(self, n):
         self.tamanho = int (n)
         self.individuo = self.pessoas (self.tamanho)
@@ -169,4 +237,9 @@ class pessoas:
                 lista[i, 2] = 'Centro-Oeste'
                 hist2[escolha2] -= 1
 
-        return list(lista)
+        return lista
+
+a=Populacao.individuos(10)
+print(a)
+
+
