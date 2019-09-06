@@ -47,28 +47,28 @@ class pessoas:
             d0 = c0[0]
             escolha0 = d0[random.randint (0, np.size (classes_c_valor0) - 1)]
             if escolha0 == 0:
-                lista[i, 0] = "0 - 1/4 S.M."
+                lista[i, 0] = "0-1/4"
                 hist0[escolha0] -= 1
             elif escolha0 == 1:
-                lista[i, 0] = "1/4 - 1/2 S.M."
+                lista[i, 0] = "1/4-1/2"
                 hist0[escolha0] -= 1
             elif escolha0 == 2:
-                lista[i, 0] = "1/2 - 1 S.M"
+                lista[i, 0] = "1/2-1"
                 hist0[escolha0] -= 1
             elif escolha0 == 3:
-                lista[i, 0] = "1 - 2 S.M"
+                lista[i, 0] = "1-2"
                 hist0[escolha0] -= 1
             elif escolha0 == 4:
-                lista[i, 0] = "2 - 3 S.M"
+                lista[i, 0] = "2-3"
                 hist0[escolha0] -= 1
             elif escolha0 == 5:
-                lista[i, 0] = "3 - 5 S.M"
+                lista[i, 0] = "3-5"
                 hist0[escolha0] -= 1
             elif escolha0 == 6:
-                lista[i, 0] = "5+ S.M"
+                lista[i, 0] = "5+"
                 hist0[escolha0] -= 1
             elif escolha0 == 7:
-                lista[i, 0] = "Sem declaração"
+                lista[i, 0] = "Sem_declaracao"
                 hist0[escolha0] -= 1
 
         # 2 atributo: Dificuldade de acesso ao local do curso 5.1.3.1
@@ -77,10 +77,10 @@ class pessoas:
             d1 = c1[0]
             escolha1 = d1[random.randint (0, np.size (classes_c_valor1) - 1)]
             if escolha1 == 0:
-                lista[i,1] = "Havia dificuldade $$"
+                lista[i,1] = "Havia"
                 hist1[escolha1] -= 1
             else:
-                lista[i,1] = "Não havia dificuldade $$"
+                lista[i,1] = "Nao_havia"
                 hist1[escolha1] -= 1
 
 
@@ -94,7 +94,7 @@ class pessoas:
                 lista[i, 6] = 'Presencial'
                 hist6[escolha6] -= 1
             else:
-                lista[i, 6] = 'A distancia'
+                lista[i, 6] = 'A_distancia'
                 hist6[escolha6] -= 1
 
         #7 atributo: Frquentaram ou nao o curso de qualificacao profissional
@@ -106,7 +106,7 @@ class pessoas:
                 lista[i, 7] = "Frequentou"
                 hist7[escolha7] -= 1
             else:
-                lista[i, 7] = "Não frequentou"
+                lista[i, 7] = "Nao_frequentou"
                 hist7[escolha7] -= 1
 
 
@@ -128,7 +128,7 @@ class pessoas:
             d5 = c5[0]
             escolha5 = d5[random.randint(0, np.size(classes_c_valor5) - 1)]
             if escolha5 == 0:
-                lista[i, 5] = 'Pública'
+                lista[i, 5] = 'Publica'
                 hist5[escolha5] -= 1
             else:
                 lista[i, 5] = 'Particular'
@@ -142,10 +142,10 @@ class pessoas:
             d4 = c4[0]
             escolha4 = d4[random.randint (0, np.size (classes_c_valor4) - 1)]
             if escolha4 == 0:
-                lista[i, 4] = 'Branco'
+                lista[i, 4] = 'Branca'
                 hist4[escolha4] -= 1
             else:
-                lista[i, 4] = 'Preto ou pardo'
+                lista[i, 4] = 'Preta/parda'
                 hist4[escolha4] -= 1
 
         #2 atributo: Regiões
@@ -171,4 +171,5 @@ class pessoas:
 
         return lista
 
-
+a=pessoas.individuos(10)
+print(a)

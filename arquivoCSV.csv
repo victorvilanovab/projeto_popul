@@ -1,0 +1,8 @@
+renda_per_capta_em_SM,0.015875,0-1/4.=0.095,1/4-1/2=0.191,1/2-1=0.178,1-2=0.229,2-3=0.185,3-5=0.061,5+=0.022,Sem_declaracao=0.041
+dificuldade_acesso,0.021,Havia=0.149,Nao_havia=0.851
+regiao,0.017,Norte=0.161,Nordeste=0.137,Sudeste=0.229,Sul=0.230,Centro-Oeste=0.242
+sexo,0.017,Homem=0.455,Mulher=0.545
+cor,0.024,Branca=0.454,Preta/parda=0.536
+instituicao_tipo,0.0285,Publica=0.191,Particular=0.809
+graduacao_tipo,0.0285,Presencial=0.945,A_distancia=0.055
+frequentou_curso_profissional,0.018,Frequentou=0.227,Nao_frequentou=0.773
