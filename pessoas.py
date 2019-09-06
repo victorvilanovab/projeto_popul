@@ -169,7 +169,4 @@ class pessoas:
                 lista[i, 2] = 'Centro-Oeste'
                 hist2[escolha2] -= 1
 
-        return lista
-
-a=pessoas.individuos(10)
-print(a)
+        return list(lista)
